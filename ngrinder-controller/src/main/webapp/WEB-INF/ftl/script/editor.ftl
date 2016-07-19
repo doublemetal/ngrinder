@@ -112,8 +112,7 @@
 			</@security.authorize>
 		</form>
 
-
-		<textarea id="codemirror_content">${((file.content)!"")?replace("&para", "&amp;para")}</textarea>
+		<textarea id="codemirror_content">${((file.content)!"")?html}</textarea>
 		<textarea id="old_content" class="hidden">${(file.content)!}</textarea>
 		<div class="pull-right" rel="popover" style="float;margin-top:-20px;margin-right:-30px;cursor: pointer"
 			title="Tip" data-html="ture"
